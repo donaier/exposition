@@ -1,0 +1,29 @@
+.exhibits
+  .exhibit
+    position: relative
+    background: transparentize(darken($bg, 50%), .4)
+    transition: background $fast, border-bottom $fast
+    padding: 15px
+    margin-top: 30px
+    border-bottom: 2px solid darken($blue, 40%)
+
+    h2
+      color: lighten($orange, 15%)
+      transition: color $fast
+      padding: 10px 0 20px
+
+    p
+      font-size: 20px
+
+  &:hover .exhibit
+    background: transparentize(darken($bg, 50%), .6)
+    border-bottom: 2px solid darken($blue, 20%)
+
+    h2
+      color: $orange
+
+  .date
+    position: absolute
+    top: -10px
+    right: 20px
+    color: lighten($orange, 15%)

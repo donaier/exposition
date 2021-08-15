@@ -6,8 +6,15 @@
           exposition
           %small donat baier
 
-%section
-  .container
-    .row
-      .col
-        entries
+%section.exhibits
+  - @exhibits.each do |exhibit|
+    = link_to '#' do
+      .container.exhibit
+        .row
+          .col-6
+            = image_tag("/assets/exhibits/#{exhibit[:poster]}")
+          .col-6
+            %h2= exhibit[:title]
+            %p= exhibit[:description].html_safe
+            .date
+              %strong= exhibit[:date]
