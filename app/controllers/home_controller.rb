@@ -3,7 +3,8 @@ class HomeController < ApplicationController
     # @exhibits = Exhibit.all
     @exhibits = [
       {
-        poster: 'chlausepragel.jpg',
+        name: 'chlausepragel',
+        poster: 'chlausepragel/poster.jpg',
         title: 'chlause/pragel',
         date: '13. Aug 2021',
         description: '

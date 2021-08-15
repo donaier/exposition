@@ -8,11 +8,11 @@
 
 %section.exhibits
   - @exhibits.each do |exhibit|
-    = link_to '#' do
+    = link_to exhibit_path(exhibit[:name]) do
       .container.exhibit
         .row
           .col-6
-            = image_tag("/assets/exhibits/#{exhibit[:poster]}")
+            = image_tag("/assets/#{exhibit[:poster]}")
           .col-6
             %h2= exhibit[:title]
             %p= exhibit[:description].html_safe
