@@ -1,6 +1,20 @@
 .exhibit
   header
     position: relative
+    height: 500px
+    background-image: linear-gradient(to bottom, transparentize($blue, .666), darken($bg, 10%))
+    background-repeat: no-repeat
+    background-size: contain
+    .title
+      position: absolute
+      bottom: 10%
+      left: 10%
+      width: 80%
+    .container
+      background-image: url('chlausepragel/header')
+      background-repeat: no-repeat
+      background-size: contain
+      height: 100%
   img
     border: 2px solid lighten($bg, 10%)
   p
@@ -17,6 +31,10 @@
       span
         color: $body-color
         float: right
+  .text
+    background-color: transparentize(darken($bg, 10%), .2)
+    border: 2px solid lighten($bg, 10%)
+    padding: 2rem 4rem 1.25rem
   .finish
     margin-top: 120px
     font-family: 'Lobster'
@@ -43,27 +61,21 @@
       &:nth-child(5)
         color: $blue
 
-
-  .text
-    background-color: transparentize(darken($bg, 10%), .2)
-    border: 2px solid lighten($bg, 10%)
-    padding: 2rem 4rem 1.25rem
-
-  &.chlausepragel
+  @media screen and (max-width: 1200px)
     header
-      height: 500px
-      background-image: linear-gradient(to bottom, transparentize($blue, .666), darken($bg, 10%))
-      background-repeat: no-repeat
-      background-size: contain
-
+      height: 140px
       .container
-        background-image: url('chlausepragel/header')
-        background-repeat: no-repeat
-        background-size: contain
-        height: 100%
-
-      .title
-        position: absolute
-        bottom: 10%
-        left: 10%
-        width: 80%
+        background-size: cover
+    .eckdaten
+      p
+        font-size: 14px
+        line-height: 100%
+    .text
+      padding: 1rem 2rem .75rem
+      font-size: 16px
+    .finish
+      margin-top: 80px
+      line-height: 48px
+      span
+        font-size: 38px
+        top: -26px
