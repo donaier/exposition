@@ -1,27 +1,71 @@
 .exhibit{ class:  @exhibit[:name] }
   %header
     .container
-      = image_tag "/assets/chlausepragel/header.jpg"
-      .row
+      .row.h-100
         .col
           .title
             = @exhibit[:title]
             %small= @exhibit[:date]
 
   %section
-    %p ..
-    %p ..
-    %p ..
-    %p ..
-    %p ..
-    %p ..
-    %p ..
-    %p ..
-    %p ..
-    %p ..
-    %p ..
-    %p ..
-    %p ..
-    %p ..
-    %p ..
-    %p ..
+    .container.my-4
+      .row
+        .col-4.offset-4.eckdaten
+          %p
+            distanz:
+            %span.distance 135 km
+            %br
+            höhenzunahme:
+            %span.elevationgain 2'800 m
+            %br
+            fahrzeit:
+            %span.movingtime 9 h
+    .container
+      .row
+        .col-12
+          = image_tag '/assets/chlausepragel/before.jpg', class: 'my-4'
+      .row
+        .col-8.offset-2.text.my-4
+          %p nach jüngsten Erfahrungen mit verschiedenem Gepäck und längeren Fahrten gezielt leichtes Gepäck und kein Packträger. auch für Kleider und Schuhe gelten bei vielen Stunden auf der Strasse andere Anforderungen als beim Mountainbike. bis zum Waldweg soll aber alles gut fahrbar sein
+          %p lange gewartet, ob die Hitze abnimmt. um fünf dann los in Richtung erster Anstieg: Linthal > Urnerboden
+      .row
+        .col-10.offset-1
+          = image_tag '/assets/chlausepragel/chlause.jpg', class: 'my-4'
+      .row
+        .col-8.offset-2.text.my-4
+          %p
+            erste von vielen Pausen. das Gepäck wurde schon kurz nach Abfahrt justiert, in letzter Minute noch für einen Ersatzschlauch
+            %strong und
+            Flickzeug entschieden
+      .row
+        .col-6
+          = image_tag '/assets/chlausepragel/chlause1.jpg', class: 'my-4'
+        .col-6
+          = image_tag '/assets/chlausepragel/chlause2.jpg', class: 'my-4'
+      .row
+        .col-8.offset-2.text.my-4
+          %p kurz nach 7, kurz nach 1 Portion Pommes und kurz vor 9, kleiner Dessert und ringsum Alpsegen. anwesende Autocamper haben sogar die Musik pausiert
+      .row
+        .col-12
+          = image_tag '/assets/chlausepragel/pass.jpg', class: 'my-4'
+      .row
+        .col-8.offset-2.text.my-4
+          %p auf Passhöhe, halb10
+          %p die Abfahrt auf dunkeln, unbekannten Strassen heisst auch, viele Kilo- und Höhenmeter zwischen mir und Zuhause
+      .row
+        .col-6
+          = image_tag '/assets/chlausepragel/ruhe.jpg', class: 'my-4'
+        .col-6
+          = image_tag '/assets/chlausepragel/selfie.jpg', class: 'my-4'
+      .row
+        .col-8.offset-2.text.my-4
+          %p nach Mitternacht waren ungeplant alle Lampenakkus leer. "churz aneligge" und schon 7 früh
+          %p in der zweiten Etappe wird die Randonnée erst zu dieser
+    .container-fluid.finish
+      .row
+        .col.text-center
+          %span.one= '#'
+          %span.two= 'Living'
+          %span.three= 'Men'
+          %span.four= 'Ride'
+          %span.five= 'Free'

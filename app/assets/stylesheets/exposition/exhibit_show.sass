@@ -1,15 +1,69 @@
 .exhibit
   header
     position: relative
-    img
-      position: absolute
-      height: 100%
-      top: 0
+  img
+    border: 2px solid lighten($bg, 10%)
+  p
+    font-size: 18px
 
+  .eckdaten
+    background-color: darken($purple, 10%)
+    border: 2px solid $purple
+    p
+      font-style: normal
+      font-size: 20px
+      margin-top: .7rem
+      color: $yellow
+      span
+        color: $body-color
+        float: right
+  .finish
+    margin-top: 120px
+    font-family: 'Lobster'
+    font-size: 0
+    line-height: 64px
+    background-color: darken($bg, 7%)
+    border-top: 2px solid lighten($bg, 5%)
+    &:hover span
+      filter: brightness(.8) saturate(.8)
+    span
+      font-size: 86px
+      position: relative
+      top: -36px
+      filter: brightness(.4) saturate(.5)
+      transition: filter $fast
+      &:nth-child(1)
+        color: $yellow
+      &:nth-child(2)
+        color: $orange
+      &:nth-child(3)
+        color: $red
+      &:nth-child(4)
+        color: $yellow
+      &:nth-child(5)
+        color: $blue
+
+
+  .text
+    background-color: transparentize(darken($bg, 10%), .2)
+    border: 2px solid lighten($bg, 10%)
+    padding: 2rem 4rem 1.25rem
 
   &.chlausepragel
     header
-      height: 60vh
-      background-image: linear-gradient(to bottom, transparent, $blue)
+      height: 500px
+      background-image: linear-gradient(to bottom, transparentize($blue, .666), darken($bg, 10%))
       background-repeat: no-repeat
       background-size: contain
+
+      .container
+        background-image: url('chlausepragel/header')
+        background-repeat: no-repeat
+        background-size: contain
+        height: 100%
+
+      .title
+        position: absolute
+        bottom: 10%
+        left: 10%
+        width: 80%
