@@ -20,17 +20,46 @@
   p
     font-size: 18px
 
-  .eckdaten
-    background-color: darken($red, 30%)
-    border: 2px solid $red
-    p
+  .ribbons
+    position: absolute
+    top: 60px
+    p.ribbon
+      position: relative
+      left: -47px
+      width: 340px
+      padding: 0px 40px 5px 50px
+
       font-style: normal
-      font-size: 20px
-      margin-top: .7rem
+      font-size: 18px
+      background-color: darken($red, 30%)
       color: $yellow
+      border-top-right-radius: 16px
+      border-bottom-right-radius: 16px
       span
         color: $body-color
         float: right
+
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        top: 32px
+        display: block
+        height: 32px
+        width: 32px
+        border-top: 16px solid darken($red, 20%)
+        border-right: 16px solid darken($red, 20%)
+        border-left: 16px solid transparent
+        border-bottom: 16px solid transparent
+      &:after
+        content: ''
+        position: absolute
+        right: 0
+        top: 0
+        display: block
+        height: 32px
+        width: 32px
+        background-image: asset-url('wheel.svg')
   .text
     background-color: transparentize(darken($bg, 10%), .2)
     border: 2px solid lighten($bg, 10%)
@@ -66,10 +95,8 @@
       height: 140px
       .container
         background-size: cover
-    .eckdaten
-      p
-        font-size: 14px
-        line-height: 100%
+    .ribbons
+      display: none
     .text
       padding: 1rem 2rem .75rem
       font-size: 16px
