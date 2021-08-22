@@ -12,7 +12,7 @@
       .container.exhibit
         .row
           .colo-12.col-xl-6
-            = image_tag("/assets/#{exhibit[:poster]}")
+            = image_tag(asset_path(exhibit[:poster]))
           .colo-12.col-xl-6
             %h2= exhibit[:title]
             %p= exhibit[:description].html_safe
