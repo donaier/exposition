@@ -11,9 +11,9 @@
     = link_to exhibit_path(exhibit[:name]) do
       .container.exhibit
         .row
-          .col-6
+          .colo-12.col-xl-6
             = image_tag("/assets/#{exhibit[:poster]}")
-          .col-6
+          .colo-12.col-xl-6
             %h2= exhibit[:title]
             %p= exhibit[:description].html_safe
             .date
