@@ -1,16 +1,26 @@
 class ExhibitsController < ApplicationController
-  def show
-    # @exhibit = Exhibit.find_by_name(params[:name])
 
-    @exhibit = {
-      name: 'chlausepragel',
-      poster: 'chlausepragel.jpg',
-      title: 'chlause/pragel',
-      date: '13. Aug 2021',
-      description: '
+  def show
+    @exhibits = [
+      {
+        name: 'laengenegg',
+        poster: 'langegg/poster.jpg',
+        title: 'längenegg - obersee > klöntal',
+        date: '27. Aug 2021',
+        description: '
+        definitionsgerechtes mountain biking <br>'
+      },
+      {
+        name: 'chlausepragel',
+        poster: 'chlausepragel/poster.jpg',
+        title: 'chlause/pragel',
+        date: '13. Aug 2021',
+        description: '
         100+ km tour über 2 pässe <br>
         cowboycamping am ufer, vermutlich wars eine tropennacht <br><br>
         is this #bikepacking?'
-    }
+      },
+    ]
+    @exhibit = @exhibits.find(name: params[:name]).first
   end
 end

@@ -1,6 +1,6 @@
 .exhibit{ class:  @exhibit[:name] }
   %header
-    .container
+    .container{ style: "background-image: url(#{@exhibit[:name] + '/header.jpg'})" }
       .row.h-100
         .col
           .title
@@ -9,30 +9,30 @@
           .ribbons
             %p.ribbon
               distanz:
-              %span.distance 135 km
+              %span.distance 63 km
             %p.ribbon
               höhenzunahme:
-              %span.elevationgain 2'800+ m
+              %span.elevationgain 1'500+ m
             %p.ribbon
               fahrzeit:
-              %span.movingtime 9 h
+              %span.movingtime 5 h
 
   %section
     .container.my-xl-4.my-2
       .row
         .col-12.col-xl-10.offset-xl-1
-          %iframe{ src: "https://ridewithgps.com/embeds?type=trip&id=73585785&metricUnits=true&sampleGraph=true", style: "width: 1px; min-width: 100%; height: 500px; border: none;", scrolling: "no" }
+          %iframe{ src: "https://ridewithgps.com/embeds?type=trip&id=74105325&metricUnits=true&sampleGraph=true", style: "width: 1px; min-width: 100%; height: 500px; border: none;", scrolling: "no" }
     .container
       .row
         .col-12
-          = image_tag asset_path('chlausepragel/before.jpg'), class: 'my-xl-4.my-2'
+          = image_tag '/assets/laengenegg/.jpg', class: 'my-xl-4.my-2'
       .row
         .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
           %p nach jüngsten Erfahrungen mit verschiedenem Gepäck und längeren Fahrten gezielt leichtes Gepäck und kein Packträger. auch für Kleider und Schuhe gelten bei vielen Stunden auf der Strasse andere Anforderungen als beim Mountainbike. bis zum Waldweg soll aber alles gut fahrbar sein
           %p lange gewartet, ob die Hitze abnimmt. um fünf dann los in Richtung erster Anstieg: Linthal > Urnerboden
       .row
         .col-10.offset-1
-          = image_tag asset_path('chlausepragel/chlause.jpg'), class: 'my-xl-4.my-2'
+          = image_tag '/assets/laengenegg/chlause.jpg', class: 'my-xl-4.my-2'
       .row
         .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
           %p
@@ -41,24 +41,24 @@
             Flickzeug entschieden
       .row
         .col-6
-          = image_tag asset_path('chlausepragel/chlause1.jpg'), class: 'my-xl-4.my-2'
+          = image_tag '/assets/laengenegg/chlause1.jpg', class: 'my-xl-4.my-2'
         .col-6
-          = image_tag asset_path('chlausepragel/chlause2.jpg'), class: 'my-xl-4.my-2'
+          = image_tag '/assets/laengenegg/chlause2.jpg', class: 'my-xl-4.my-2'
       .row
         .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
           %p kurz nach 7, kurz nach 1 Portion Pommes und kurz vor 9, kleiner Dessert und ringsum Alpsegen. anwesende Autocamper haben sogar die Musik pausiert
       .row
         .col-12
-          = image_tag asset_path('chlausepragel/pass.jpg'), class: 'my-xl-4.my-2'
+          = image_tag '/assets/laengenegg/pass.jpg', class: 'my-xl-4.my-2'
       .row
         .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
           %p auf Passhöhe, halb10
           %p die Abfahrt auf dunkeln, unbekannten Strassen heisst auch, viele Kilo- und Höhenmeter zwischen mir und Zuhause
       .row
         .col-6
-          = image_tag asset_path('chlausepragel/ruhe.jpg'), class: 'my-xl-4.my-2'
+          = image_tag '/assets/laengenegg/ruhe.jpg', class: 'my-xl-4.my-2'
         .col-6
-          = image_tag asset_path('chlausepragel/selfie.jpg'), class: 'my-xl-4.my-2'
+          = image_tag '/assets/laengenegg/selfie.jpg', class: 'my-xl-4.my-2'
       .row
         .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
           %p nach Mitternacht waren ungeplant alle Lampenakkus leer. "churz aneligge" und schon 7 früh
