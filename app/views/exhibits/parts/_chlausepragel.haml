@@ -1,6 +1,6 @@
 .exhibit{ class:  @exhibit[:name] }
   %header
-    .container
+    .container{ style: "background-image: url(#{image_path @exhibit[:name] + '/header.jpg'})" }
       .row.h-100
         .col
           .title

@@ -1,7 +1,7 @@
 .exhibit
   header
     position: relative
-    height: 500px
+    height: 470px
     background-image: linear-gradient(to bottom, transparentize($blue, .666), darken($bg, 10%))
     background-repeat: no-repeat
     background-size: contain
@@ -11,16 +11,16 @@
       left: 10%
       width: 80%
     .container
-<<<<<<< Updated upstream
-      background-image: image-url('chlausepragel/header.jpg')
-=======
-      // background-image: url('chlausepragel/header')
->>>>>>> Stashed changes
+      // background-image: image-url('chlausepragel/header.jpg')
       background-repeat: no-repeat
       background-size: contain
       height: 100%
   img
     border: 2px solid lighten($bg, 10%)
+    &.in-textbox
+      border: none
+      position: absolute
+      left: 0
   p
     font-size: 18px
 
@@ -68,6 +68,9 @@
     background-color: transparentize(darken($bg, 10%), .2)
     border: 2px solid lighten($bg, 10%)
     padding: 2rem 4rem 1.25rem
+    &.with-image
+      padding-bottom: 280px
+      overflow: hidden
   .finish
     margin-top: 120px
     font-family: 'Lobster'

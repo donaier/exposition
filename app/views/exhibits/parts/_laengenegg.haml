@@ -1,6 +1,6 @@
 .exhibit{ class:  @exhibit[:name] }
   %header
-    .container{ style: "background-image: url(#{@exhibit[:name] + '/header.jpg'})" }
+    .container{ style: "background-image: url(#{image_path @exhibit[:name] + '/header.jpg'})" }
       .row.h-100
         .col
           .title
@@ -24,45 +24,39 @@
           %iframe{ src: "https://ridewithgps.com/embeds?type=trip&id=74105325&metricUnits=true&sampleGraph=true", style: "width: 1px; min-width: 100%; height: 500px; border: none;", scrolling: "no" }
     .container
       .row
-        .col-12
-          = image_tag '/assets/laengenegg/.jpg', class: 'my-xl-4.my-2'
+        .col-6
+          = image_tag '/assets/laengenegg/laengenegg1.jpg', class: 'my-xl-4.my-2'
+        .col-6
+          = image_tag '/assets/laengenegg/laengenegg2.jpg', class: 'my-xl-4.my-2'
       .row
         .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
-          %p nach jüngsten Erfahrungen mit verschiedenem Gepäck und längeren Fahrten gezielt leichtes Gepäck und kein Packträger. auch für Kleider und Schuhe gelten bei vielen Stunden auf der Strasse andere Anforderungen als beim Mountainbike. bis zum Waldweg soll aber alles gut fahrbar sein
-          %p lange gewartet, ob die Hitze abnimmt. um fünf dann los in Richtung erster Anstieg: Linthal > Urnerboden
+          %p im Aufstieg zum Obersee / am Obersee
+          %p Sonne wenig, Temperatur tief für Ende August, Transpiration gewohnt hoch
       .row
         .col-10.offset-1
-          = image_tag '/assets/laengenegg/chlause.jpg', class: 'my-xl-4.my-2'
+          = image_tag '/assets/laengenegg/laengenegg3.jpg', class: 'my-xl-4.my-2'
       .row
         .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
           %p
-            erste von vielen Pausen. das Gepäck wurde schon kurz nach Abfahrt justiert, in letzter Minute noch für einen Ersatzschlauch
-            %strong und
-            Flickzeug entschieden
+            Blick zurück, Obersee schon versteckt. gut über 10% Steigung.
+            %br
+            kurz vor Passhöhe werden es dann bis 25%
       .row
-        .col-6
-          = image_tag '/assets/laengenegg/chlause1.jpg', class: 'my-xl-4.my-2'
-        .col-6
-          = image_tag '/assets/laengenegg/chlause2.jpg', class: 'my-xl-4.my-2'
+        .col-10.offset-1
+          = image_tag '/assets/laengenegg/laengenegg4.jpg', class: 'my-xl-4.my-2'
       .row
         .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
-          %p kurz nach 7, kurz nach 1 Portion Pommes und kurz vor 9, kleiner Dessert und ringsum Alpsegen. anwesende Autocamper haben sogar die Musik pausiert
+          %p letzte Pause vor der nächsten Pause. Material wie erwartet tiptop
       .row
         .col-12
-          = image_tag '/assets/laengenegg/pass.jpg', class: 'my-xl-4.my-2'
+          = image_tag '/assets/laengenegg/laengenegg6.jpg', class: 'my-xl-4.my-2'
       .row
-        .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
-          %p auf Passhöhe, halb10
-          %p die Abfahrt auf dunkeln, unbekannten Strassen heisst auch, viele Kilo- und Höhenmeter zwischen mir und Zuhause
+        .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2.with-image
+          %p knapp 3 Jahre früher, von der anderen Seite mit mehr Sonne:
+          = image_tag '/assets/laengenegg/laengenegg_past.jpg', class: 'in-textbox'
       .row
-        .col-6
-          = image_tag '/assets/laengenegg/ruhe.jpg', class: 'my-xl-4.my-2'
-        .col-6
-          = image_tag '/assets/laengenegg/selfie.jpg', class: 'my-xl-4.my-2'
-      .row
-        .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
-          %p nach Mitternacht waren ungeplant alle Lampenakkus leer. "churz aneligge" und schon 7 früh
-          %p in der zweiten Etappe wird die Randonnée erst zu dieser
+        .col-12
+          = image_tag '/assets/laengenegg/laengenegg5.jpg', class: 'my-xl-4.my-2'
     .container-fluid.finish
       .row
         .col.text-center

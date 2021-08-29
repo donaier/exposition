@@ -7,8 +7,7 @@ class ExhibitsController < ApplicationController
         poster: 'langegg/poster.jpg',
         title: 'längenegg - obersee > klöntal',
         date: '27. Aug 2021',
-        description: '
-        definitionsgerechtes mountain biking <br>'
+        description: 'definitionsgerechtes mountain biking <br>'
       },
       {
         name: 'chlausepragel',
@@ -21,6 +20,6 @@ class ExhibitsController < ApplicationController
         is this #bikepacking?'
       },
     ]
-    @exhibit = @exhibits.find(name: params[:name]).first
+    @exhibit = @exhibits.select{ |e| e[:name] == params[:name] }.first
   end
 end
