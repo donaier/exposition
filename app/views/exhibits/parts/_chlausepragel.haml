@@ -1,3 +1,39 @@
+.modal.fade#gallery
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      .modal-body.p-0
+        #galleryCarousel.carousel.slide{ 'data-bs-ride': '', 'data-bs-wrap': 'true' }
+          .carousel-indicators
+            %button.active{ type: 'button', 'data-bs-target': '#galleryIndicators', 'data-bs-slide-to': "0" }
+            %button{ type: 'button', 'data-bs-target': '#galleryCarousel', 'data-bs-slide-to': "1" }
+            %button{ type: 'button', 'data-bs-target': '#galleryCarousel', 'data-bs-slide-to': "2" }
+            %button{ type: 'button', 'data-bs-target': '#galleryCarousel', 'data-bs-slide-to': "3" }
+            %button{ type: 'button', 'data-bs-target': '#galleryCarousel', 'data-bs-slide-to': "4" }
+            %button{ type: 'button', 'data-bs-target': '#galleryCarousel', 'data-bs-slide-to': "5" }
+            %button{ type: 'button', 'data-bs-target': '#galleryCarousel', 'data-bs-slide-to': "6" }
+          .carousel-inner
+            .carousel-item.active
+              = image_tag asset_path("chlausepragel/before.jpg"), class: 'd-block '
+            .carousel-item
+              = image_tag asset_path("chlausepragel/chlause.jpg"), class: 'd-block '
+            .carousel-item
+              = image_tag asset_path("chlausepragel/chlause1.jpg"), class: 'd-block '
+            .carousel-item
+              = image_tag asset_path("chlausepragel/chlause2.jpg"), class: 'd-block '
+            .carousel-item
+              = image_tag asset_path("chlausepragel/pass.jpg"), class: 'd-block '
+            .carousel-item
+              = image_tag asset_path("chlausepragel/ruhe.jpg"), class: 'd-block '
+            .carousel-item
+              = image_tag asset_path("chlausepragel/selfie.jpg"), class: 'd-block '
+          %button{ class: "carousel-control-prev", type: "button", 'data-bs-target': "#galleryCarousel", 'data-bs-slide': "prev" }
+            %span{ class: "carousel-control-prev-icon" }
+          %button{ class: "carousel-control-next", type: "button", 'data-bs-target': "#galleryCarousel", 'data-bs-slide': "next" }
+            %span{ class: "carousel-control-next-icon" }
+
+
+
+
 .exhibit{ class:  @exhibit[:name] }
   %header
     .container{ style: "background-image: url(#{image_path @exhibit[:name] + '/header.jpg'})" }
@@ -25,14 +61,16 @@
     .container
       .row
         .col-12
-          = image_tag asset_path('chlausepragel/before.jpg'), class: 'my-xl-4.my-2'
+          %button.btn{ 'data-bs-toggle': 'modal', 'data-bs-target': '#gallery' }
+            = image_tag asset_path('chlausepragel/before.jpg'), class: 'my-xl-4.my-2'
       .row
         .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
           %p nach jüngsten Erfahrungen mit verschiedenem Gepäck und längeren Fahrten gezielt leichtes Gepäck und kein Packträger. auch für Kleider und Schuhe gelten bei vielen Stunden auf der Strasse andere Anforderungen als beim Mountainbike. bis zum Waldweg soll aber alles gut fahrbar sein
           %p lange gewartet, ob die Hitze abnimmt. um fünf dann los in Richtung erster Anstieg: Linthal > Urnerboden
       .row
         .col-10.offset-1
-          = image_tag asset_path('chlausepragel/chlause.jpg'), class: 'my-xl-4.my-2'
+          %button.btn{ 'data-bs-toggle': 'modal', 'data-bs-target': '#gallery' }
+            = image_tag asset_path('chlausepragel/chlause.jpg'), class: 'my-xl-4.my-2'
       .row
         .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
           %p
@@ -41,24 +79,29 @@
             Flickzeug entschieden
       .row
         .col-6
-          = image_tag asset_path('chlausepragel/chlause1.jpg'), class: 'my-xl-4.my-2'
+          %button.btn{ 'data-bs-toggle': 'modal', 'data-bs-target': '#gallery' }
+            = image_tag asset_path('chlausepragel/chlause1.jpg'), class: 'my-xl-4.my-2'
         .col-6
-          = image_tag asset_path('chlausepragel/chlause2.jpg'), class: 'my-xl-4.my-2'
+          %button.btn{ 'data-bs-toggle': 'modal', 'data-bs-target': '#gallery' }
+            = image_tag asset_path('chlausepragel/chlause2.jpg'), class: 'my-xl-4.my-2'
       .row
         .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
           %p kurz nach 7, kurz nach 1 Portion Pommes und kurz vor 9, kleiner Dessert und ringsum Alpsegen. anwesende Autocamper haben sogar die Musik pausiert
       .row
         .col-12
-          = image_tag asset_path('chlausepragel/pass.jpg'), class: 'my-xl-4.my-2'
+          %button.btn{ 'data-bs-toggle': 'modal', 'data-bs-target': '#gallery' }
+            = image_tag asset_path('chlausepragel/pass.jpg'), class: 'my-xl-4.my-2'
       .row
         .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
           %p auf Passhöhe, halb10
           %p die Abfahrt auf dunkeln, unbekannten Strassen heisst auch, viele Kilo- und Höhenmeter zwischen mir und Zuhause
       .row
         .col-6
-          = image_tag asset_path('chlausepragel/ruhe.jpg'), class: 'my-xl-4.my-2'
+          %button.btn{ 'data-bs-toggle': 'modal', 'data-bs-target': '#gallery' }
+            = image_tag asset_path('chlausepragel/ruhe.jpg'), class: 'my-xl-4.my-2'
         .col-6
-          = image_tag asset_path('chlausepragel/selfie.jpg'), class: 'my-xl-4.my-2'
+          %button.btn{ 'data-bs-toggle': 'modal', 'data-bs-target': '#gallery' }
+            = image_tag asset_path('chlausepragel/selfie.jpg'), class: 'my-xl-4.my-2'
       .row
         .col-12.col-xl-8.offset-xl-2.text.my-xl-4.my-2
           %p nach Mitternacht waren ungeplant alle Lampenakkus leer. "churz aneligge" und schon 7 früh
